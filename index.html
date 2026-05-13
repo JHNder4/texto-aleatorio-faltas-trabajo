@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Texto Aleatorio para Faltar al Trabajo</title>
+
+<style>
+body{
+margin:0;
+font-family:Arial,sans-serif;
+background:linear-gradient(135deg,#111,#222);
+color:white;
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+}
+
+.container{
+width:90%;
+max-width:600px;
+text-align:center;
+padding:30px;
+background:rgba(255,255,255,0.05);
+border-radius:20px;
+box-shadow:0 0 20px rgba(0,0,0,0.4);
+}
+
+button{
+padding:15px 25px;
+font-size:20px;
+border:none;
+border-radius:12px;
+cursor:pointer;
+}
+
+#texto{
+margin-top:30px;
+font-size:26px;
+line-height:1.5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>😂 Excusas para Faltar al Trabajo</h1>
+
+<p>Presiona el botón para generar una excusa aleatoria.</p>
+
+<button onclick="generarTexto()">
+Generar Excusa
+</button>
+
+<div id="texto"></div>
+
+</div>
+
+<script>
+
+const textos = [
+
+"Mi perro apagó la alarma.",
+
+"Un mariachi bloqueó mi calle.",
+
+"Mi vecino confundió mi coche con Uber.",
+
+"Me quedé atrapado viendo TikTok.",
+
+"Mi gato tuvo una crisis existencial.",
+
+"Se me olvidó que hoy existía.",
+
+"Un tamal explotó en la cocina.",
+
+"Mi internet decidió jubilarse."
+
+];
+
+function generarTexto(){
+
+const random =
+textos[Math.floor(Math.random()*textos.length)];
+
+document.getElementById("texto").innerText =
+random;
+
+}
+
+</script>
+
+</body>
+</html>
